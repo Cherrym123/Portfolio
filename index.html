@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CMarthala — Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Patrick+Hand&family=Pacifico&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="page">
+
+    <!-- NAVBAR -->
+    <header class="nav">
+      <div class="nav__inner">
+        <a class="logo" href="#home" aria-label="Home">
+          <span class="logo__j">C</span>Marthala<span class="logo__dot">.</span>
+        </a>
+
+        <nav class="menu" aria-label="Primary navigation">
+          <a class="menu__link is-active" href="#home">Home</a>
+          <a class="menu__link" href="#education">Education</a>
+          <a class="menu__link" href="#experience">Experience</a>
+          <a class="menu__link" href="#projects">Projects</a>
+          <a class="menu__link" href="#certifications">Certifications</a>
+          <a class="menu__link" href="#contact">Contact</a>
+        </nav>
+
+        <a class="btn" href="Documents/Charan Reddy Marthala Resume.docx" download="Charan_Marthala_.Net_Resume.docx" rel="noreferrer">Download Resume</a>
+
+        <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <!-- Mobile menu -->
+      <div class="menu-mobile" id="menuMobile">
+        <a class="menu__link" href="#home">Home</a>
+        <a class="menu__link" href="#education">Education</a>
+        <a class="menu__link" href="#experience">Experience</a>
+        <a class="menu__link" href="#projects">Projects</a>
+        <a class="menu__link" href="#certifications">Certifications</a>
+        <a class="menu__link" href="#contact">Contact</a>
+        <a class="btn btn--full" href="#" target="_blank" rel="noreferrer">Download CV</a>
+      </div>
+    </header>
+
+    <!-- HERO (KEEP THIS VIBE) -->
+    <main id="home" class="hero">
+      <!-- LEFT TEXT -->
+      <section class="hero__left reveal">
+        <h1 class="hand">
+          Hy! I Am<br/>
+          <span class="name">Charan Marthala<span class="name__dot">.</span></span>
+        </h1>
+
+        <div class="exp">
+          <div class="exp__num">3+</div>
+          <div class="exp__text">
+            <div class="exp__years">YEARS OF</div>
+            <div class="exp__label">EXPERIENCE</div>
+          </div>
+        </div>
+
+        <div class="social">
+          <!-- <a href="#" aria-label="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a> -->
+          <a href="https://github.com/Cherrym123" target="_blank" aria-label="twitter"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/charan-reddy05/" target="_blank" aria-label="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </section>
+
+      <!-- CENTER IMAGE -->
+      <section class="hero__center reveal">
+        <svg class="path" viewBox="0 0 420 250" fill="none" aria-hidden="true">
+          <path d="M15 190
+                   C 90 210, 90 80, 160 100
+                   S 250 170, 330 115
+                   S 375 55, 405 95"
+                stroke="rgba(47,107,100,.55)"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-dasharray="8 10"/>
+          <path d="M15 190 L25 180 M15 190 L28 196"
+                stroke="rgba(47,107,100,.55)" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+
+        <div class="portrait">
+          <div class="portrait__ring"></div>
+          <img
+            src="./Documents/images/ProfilePic.jpeg"
+            alt="Profile portrait"
+          />
+        </div>
+      </section>
+
+      <!-- RIGHT SIDE -->
+      <section class="hero__right reveal">
+        <p class="quote">
+          I built softwares that makes things simple,<br/>
+          and I love what i do.
+        </p>
+
+        <!-- Rating -->
+        <!-- <div class="rating">
+          <div class="rating__top">
+            <div class="rating__label">12k Reviews On</div>
+            <div class="stars" aria-label="rating 5">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+
+          <div class="rating__bottom">
+            <div class="avatars" aria-hidden="true">
+              <img src="https://i.pravatar.cc/40?img=12" alt="">
+              <img src="https://i.pravatar.cc/40?img=32" alt="">
+              <img src="https://i.pravatar.cc/40?img=45" alt="">
+              <img src="https://i.pravatar.cc/40?img=18" alt="">
+              <img src="https://i.pravatar.cc/40?img=27" alt="">
+            </div>
+            <div class="score"><div class="score__num">4.9</div></div>
+          </div>
+        </div> -->
+
+        <div class="creative">
+          <div class="creative__script">Full Stack</div>
+          <div class="creative__main">Developer<span class="creative__dot">.</span></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section">
+      <div class="section__head reveal">
+        <h2>Education</h2>
+        <!-- <p class="muted">Your degrees, clean and recruiter-friendly.</p> -->
+      </div>
+
+      <div class="grid-3">
+        <article class="card reveal">
+          <div class="card__top">
+            <h3>MBA in Finance</h3>
+            <span class="pill small">2026 – Present</span>
+          </div>
+          <p class="muted">K L University</p>
+          <div class="card__line"></div>
+          <div class="chips">
+            <span class="chip">Ongoing</span>
+            <!-- <span class="chip">Cloud</span>
+            <span class="chip">Security</span> -->
+          </div>
+        </article>
+
+
+        <article class="card reveal">
+          <div class="card__top">
+            <h3>M.S. in Computer and Information Sciences</h3>
+            <span class="pill small">2021 – 2023</span>
+          </div>
+          <p class="muted">Texas Tech University</p>
+          <div class="card__line"></div>
+          <div class="chips">
+            <span class="chip">Grade: 3.47/4</span>
+            <!-- <span class="chip">Cloud</span>
+            <span class="chip">Security</span> -->
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__top">
+            <h3>B.S. in Computer Science Engineering</h3>
+            <span class="pill small">2017 – 2021</span>
+          </div>
+          <p class="muted">K L University</p>
+          <div class="card__line"></div>
+          <div class="chips">
+            <span class="chip">Grade: 3.5/4</span>
+            <!-- <span class="chip">Databases</span>
+            <span class="chip">Web Dev</span> -->
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE (PIPELINE TIMELINE) -->
+    <section id="experience" class="section">
+        <div class="section__head reveal">
+            <h2>Professional Experience</h2>
+            <!-- <p class="muted">Pipeline timeline with perfect alignment.</p> -->
+        </div>
+
+        <div class="timeline">
+            <div class="timeline__line" aria-hidden="true"></div>
+
+            <!-- Item -->
+            <div class="timeline__item reveal">
+            <div class="timeline__node" aria-hidden="true"></div>
+
+            <article class="timeline__card">
+                <div class="timeline__top">
+                <div>
+                    <h3>State of Florida - Dept of Health</h3>
+                    <p class="muted">Full Stack Software Developer</p>
+                </div>
+                <span class="pill">Nov 2023 — Present</span>
+                </div>
+
+                <ul class="bullets">
+                <li>The project revolves around developing a budgeting system for the Health Department, which involves gathering data from multiple sources  to track revenue, expenses, and legislature-approved budgets.</li>
+                <li>Our 8-person team, including myself as a developer, is migrating a legacy application to Azure, transitioning from Classic ASP, JavaScript, and VB Script to ASP.NET Core, JavaScript, and integrating SSRS reports. </li>
+                <li>I am also responsible for documenting legacy modules for remediation in the new Azure environment.</li>
+                <li>We're also utilizing Azure services like Azure DevOps for version control and CI/CD pipelines to streamline deployment processes. </li>
+                <li>Our SDLC methodology includes requirements gathering, design, development, testing, deployment, and ongoing support, ensuring a seamless transition and improved functionality in the Azure application.</li>
+                <li>Implemented Entity Framework Core to manage data access logic , enabling seamless internaction with SQL server databases and simplifying CRUD operations within the ASP.Net core environment.</li>
+                </ul>
+
+                <div class="chips">
+                <span class="chip">.Net</span><span class="chip">MVC</span><span class="chip">SQL</span>
+                <span class="chip">Azure</span><span class="chip">SSRS</span>
+                </div>
+            </article>
+            </div>
+
+            <!-- Item -->
+            <div class="timeline__item reveal">
+            <div class="timeline__node" aria-hidden="true"></div>
+
+            <article class="timeline__card">
+                <div class="timeline__top">
+                <div>
+                    <h3>Smart Energy Water</h3>
+                    <p class="muted">Full Stack Developer</p>
+                </div>
+                <span class="pill">Jun 2023 — Oct 2023</span>
+                </div>
+
+                <ul class="bullets">
+                <li>Experience with web development technologies including ASP.NET, HTML, JavaScript, JQuery and CSS. </li>
+                <li>Experience with database development including relational database design, SQL and ORM technologies.</li>
+                <li>Experience designing and developing enterprise grade software,source control management systems and deployment environment, with debugging, performance profiling and optimization.</li>
+                <li>Experience designing and developing enterprise grade software,source control management systems and deployment environment, with debugging, performance profiling and optimization.</li>
+                <li>Experience with XHTML, JavaScript, Visual Studio, Team Foundation Server, and TFS Source Control. </li>
+                </ul>
+
+                <div class="chips">
+                <span class="chip">C#</span><span class="chip">AWS</span><span class="chip">JS</span><span class="chip">HTML</span>
+                <span class="chip">CSS</span><span class="chip">MongoDB</span><span class="chip">ASP.Net</span><span class="chip">Entity Framework</span>
+                </div>
+            </article>
+            </div>
+
+            <!-- Item -->
+            <div class="timeline__item reveal">
+            <div class="timeline__node" aria-hidden="true"></div>
+
+            <article class="timeline__card">
+                <div class="timeline__top">
+                <div>
+                    <h3>Texas Tech University - Studentg Assistant</h3>
+                    <p class="muted">Dot Net Developer</p>
+                </div>
+                <span class="pill">Jun 2022 — Mar 2023</span>
+                </div>
+
+                <ul class="bullets">
+                <li>Developed and maintained internal .NET applications to support payroll processing and reporting functions, ensuring accuracy and compliance with university policies.</li>
+                <li>Assisted in the migration of legacy systems to modern .NET frameworks, improving maintainability and performance.</li>
+                <li>Wrote SQL queries, stored procedures, and functions to support payroll operations and generate financial reports.</li>
+                <li>Worked closely with senior developers and payroll staff to gather requirements, troubleshoot issues, and deploy solutions in a timely manner.</li>
+                <li>Participated in testing and debugging processes, identifying and resolving bugs in payroll-related applications.</li>
+                <li>Contributed to the documentation of system workflows, technical designs, and user manuals for internal applications.</li>
+                </ul>
+
+                <div class="chips">
+                <span class="chip">C#</span><span class="chip">AWS</span><span class="chip">JS</span><span class="chip">HTML</span>
+                <span class="chip">CSS</span><span class="chip">MongoDB</span><span class="chip">ASP.Net</span><span class="chip">Entity Framework</span>
+                </div>
+            </article>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="section__head reveal">
+        <h2>Projects</h2>
+        <!-- <p class="muted">Minimal cards with premium hover.</p> -->
+      </div>
+
+      <div class="grid-3">
+        <a class="p-card reveal" href="#" target="_blank" rel="noreferrer">
+          <div class="p-top">
+            <h3>Portfolio Website</h3>
+            <span class="pill small">UI</span>
+          </div>
+          <p>Minimal portfolio with scroll reveal, timeline experience, and fast loading.</p>
+          <div class="chips">
+            <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JS</span>
+          </div>
+          <div class="p-bottom">
+            <span class="muted">View</span><span class="arrow">↗</span>
+          </div>
+        </a>
+
+        <a class="p-card reveal" href="https://github.com/Cherrym123/PaymentTracker" target="_blank" rel="noreferrer">
+          <div class="p-top">
+            <h3>Personal EMI Tracker</h3>
+            <span class="pill small">Web Application</span>
+          </div>
+          <p>Developed a .NET MVC application to track monthly payments and EMIs, calculate due amounts, 
+            send automated email reminders for upcoming payments, and maintain all payment records in a centralized dashboard.</p>
+          <div class="chips">
+            <span class="chip">C#</span><span class="chip">MVC</span><span class="chip">JS</span><span class="chip">SQL</span>
+          </div>
+          <div class="p-bottom">
+            <span class="muted">View</span><span class="arrow">↗</span>
+          </div>
+        </a>
+
+        <!-- <a class="p-card reveal" href="#" target="_blank" rel="noreferrer">
+          <div class="p-top">
+            <h3>Task Manager</h3>
+            <span class="pill small">Product</span>
+          </div>
+          <p>Clean UX task workflow with filters, tags, and responsive design.</p>
+          <div class="chips">
+            <span class="chip">JavaScript</span><span class="chip">REST</span><span class="chip">UI</span>
+          </div>
+          <div class="p-bottom">
+            <span class="muted">View</span><span class="arrow">↗</span>
+          </div>
+        </a> -->
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="section">
+      <div class="section__head reveal">
+        <h2>Certifications</h2>
+        <p class="muted">Click to view</p>
+      </div>
+
+      <div class="grid-3">
+        <article class="cert reveal"
+           onclick="window.open('Documents/Certificates/Azure Developer Associate.pdf', '_blank')"
+           style="cursor: pointer;">
+          <div class="cert__icon"><i class="fa-solid fa-cloud"></i></div>
+          <div>
+            <h3>Azure Developer Associate</h3>
+            <p class="muted">Microsoft · 2024</p>
+          </div>
+          <span class="cert-view">
+             <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </span>
+        </article>
+
+        <article class="cert reveal"
+           onclick="window.open('Documents/Certificates/Python.pdf', '_blank')"
+           style="cursor: pointer;">
+          <div class="cert__icon"><i class="fa-brands fa-python"></i></div>
+          <div>
+            <h3>Python Programming Language</h3>
+            <p class="muted">Python Institute · 2023</p>
+          </div>
+          <span class="cert-view">
+             <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </span>
+        </article>
+
+        <article class="cert reveal"
+           onclick="window.open('Documents/Certificates/ServiceNow Certified System Administrator.pdf', '_blank')"
+           style="cursor: pointer;">
+          <div class="cert__icon"><i class="fa-solid fa-server"></i></div>
+          <div>
+            <h3>Certified System Administrator</h3>
+            <p class="muted">servicenow · 2020</p>
+          </div>
+          <span class="cert-view">
+             <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </span>
+        </article>
+      </div>
+
+      <br>
+
+      <div class="grid-3">
+
+        <article class="cert reveal"
+           onclick="window.open('Documents/Certificates/UIPATH.pdf', '_blank')"
+           style="cursor: pointer;">
+          <div class="cert__icon"><i class="fa-solid fa-robot"></i></div>
+          <div>
+            <h3>RPA Developer Advanced</h3>
+            <p class="muted">UiPath · 2019</p>
+          </div>
+          <span class="cert-view">
+             <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </span>
+        </article>
+
+        <article class="cert reveal"
+           onclick="window.open('Documents/Certificates/Automation Anywhere Certified Advanced RPA Professional.pdf', '_blank')"
+           style="cursor: pointer;">
+          <div class="cert__icon"><i class="fa-solid fa-award"></i></div>
+          <div>
+            <h3>AA Certified Advanced RPA Professional</h3>
+            <p class="muted">Automation AnyWhere · 2019</p>
+          </div>
+          <span class="cert-view">
+             <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </span>
+        </article>
+
+        <article class="cert reveal"
+           onclick="window.open('Documents/Certificates/Automation Anywhere Essentials RPA Professional.pdf', '_blank')"
+           style="cursor: pointer;">
+          <div class="cert__icon"><i class="fa-solid fa-award"></i></div>
+          <div>
+            <h3>AA Certified Essentials RPA Professional</h3>
+            <p class="muted">Automation AnyWhere · 2019</p>
+          </div>
+          <span class="cert-view">
+             <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </span>
+        </article>
+      </div>
+
+      <br>
+      
+      <div class="grid-3">
+      
+        <article class="cert reveal"
+           onclick="window.open('Documents/Certificates/CISSP.pdf', '_blank')"
+           style="cursor: pointer;">
+          <div class="cert__icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <div>
+            <h3>Certified Information System Security Professional</h3>
+            <p class="muted">Simplilearn · 2019</p>
+          </div>
+          <span class="cert-view">
+             <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </span>
+        </article>
+
+        
+      </div>
+      
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="section__head reveal">
+        <h2>Contact Me</h2>
+        <!-- <p class="muted">Let’s build something clean and scalable.</p> -->
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card reveal">
+          <h3>Say hello 👋</h3>
+          <p class="muted">Email is the fastest way to reach me.</p>
+
+          <div class="contact-links">
+            <a class="link-row" href="mailto:charanreddy.marthala123@gmail.com">
+              <span><i class="fa-regular fa-envelope"></i> Gmail</span>
+              <span class="arrow">↗</span>
+            </a>
+            <a class="link-row" href="https://www.linkedin.com/in/charan-reddy05/" target="_blank" rel="noreferrer">
+              <span><i class="fa-brands fa-linkedin"></i> LinkedIn</span>
+              <span class="arrow">↗</span>
+            </a>
+            <a class="link-row" href="https://github.com/Cherrym123" target="_blank" rel="noreferrer">
+              <span><i class="fa-brands fa-github"></i> GitHub</span>
+              <span class="arrow">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <form class="form reveal" onsubmit="return false;">
+          <div class="row">
+            <label>
+              Name
+              <input type="text" placeholder="Your name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" placeholder="you@gmail.com" required />
+            </label>
+          </div>
+
+          <label>
+            Message
+            <textarea rows="5" placeholder="Tell me what you have in mind..." required></textarea>
+          </label>
+
+          <button class="btn btn--submit" type="submit">
+            Send Message
+          </button>
+
+          <p class="muted tiny">Tip: connect this form to Formspree / Netlify Forms later.</p>
+        </form>
+      </div>
+
+      <footer class="footer">
+        <span>© <span id="year"></span> Charan Marthala</span>
+        <span class="footer__dot">•</span>
+        <span>Made with ❤️</span>
+      </footer>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
