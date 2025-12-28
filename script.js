@@ -63,5 +63,47 @@ const io = new IntersectionObserver((entries) => {
 
 revealEls.forEach(el => io.observe(el));
 
+// Scroll progress bar (NEW)
+const progressBar = document.getElementById('progressBar');
+window.addEventListener('scroll', () => {
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const scrolled = (window.scrollY / docHeight) * 100;
+  if (progressBar) progressBar.style.width = `${scrolled}%`;
+});
+
+// Contact form AJAX (Formspree) (NEW)
+const form = document.getElementById('contactForm');
+const formStatus = document.getElementById('formStatus');
+const sendBtn = document.getElementById('sendBtn');
+
+form?.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  if (formStatus) {
+    formStatus.style.display = 'block';
+    formStatus.textContent = 'Sending...';
+  }
+  if (sendBtn) sendBtn.disabled = true;
+
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (res.ok) {
+      form.reset();
+      if (formStatus) formStatus.textContent = '✅ Message sent! I will get back to you soon.';
+    } else {
+      if (formStatus) formStatus.textContent = '❌ Something went wrong. Please try again.';
+    }
+  } catch (err) {
+    if (formStatus) formStatus.textContent = '❌ Network error. Please try again.';
+  } finally {
+    if (sendBtn) sendBtn.disabled = false;
+  }
+});
+
 // Init
 setActive('#home');
