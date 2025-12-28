@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Patrick+Hand&family=Pacifico&display=swap" rel="stylesheet">
- 
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -264,7 +264,7 @@
             <article class="timeline__card">
                 <div class="timeline__top">
                 <div>
-                    <h3>Texas Tech University - Studentg Assistant</h3>
+                    <h3>Texas Tech University - Student Assistant</h3>
                     <p class="muted">Dot Net Developer</p>
                 </div>
                 <span class="pill">Jun 2022 — Mar 2023</span>
@@ -484,28 +484,40 @@
           </div>
         </div>
 
-        <form class="form reveal" onsubmit="return false;">
+        <!-- <form class="form reveal" onsubmit="return false;"> -->
+          <form
+            class="form reveal"
+            action="https://formspree.io/f/xykyjbjr"
+            method="POST"
+          >
+
           <div class="row">
             <label>
               Name
-              <input type="text" placeholder="Your name" required />
+              <input type="text" name="name" placeholder="Your name" required />
             </label>
+
             <label>
               Email
-              <input type="email" placeholder="you@gmail.com" required />
+              <input type="email" name="email" placeholder="you@gmail.com" required />
             </label>
           </div>
 
           <label>
             Message
-            <textarea rows="5" placeholder="Tell me what you have in mind..." required></textarea>
+            <textarea name="message" rows="5" placeholder="Tell me what you have in mind..." required></textarea>
           </label>
+
+          <!-- Optional extras -->
+          <input type="hidden" name="_subject" value="New message from portfolio contact form" />
+          <input type="hidden" name="_captcha" value="false" />
 
           <button class="btn btn--submit" type="submit">
             Send Message
           </button>
 
-          <p class="muted tiny">Tip: connect this form to Formspree / Netlify Forms later.</p>
+          <!-- <p class="muted tiny">Tip: connect this form to Formspree / Netlify Forms later.</p> -->
+
         </form>
       </div>
 
@@ -521,4 +533,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
