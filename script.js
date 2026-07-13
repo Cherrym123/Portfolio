@@ -107,3 +107,33 @@ form?.addEventListener('submit', async (e) => {
 
 // Init
 setActive('#home');
+
+// Compute professional experience from earliest timeline start date and update UI
+(function computeExperience() {
+  const expNumEl = document.querySelector('.exp__num');
+  if (!expNumEl) return;
+
+  const pillEls = Array.from(document.querySelectorAll('.timeline__card .pill'));
+  const dates = pillEls.map(el => el.textContent.trim()).filter(Boolean);
+  const starts = [];
+
+  dates.forEach(text => {
+    const parts = text.split(/\s*[-–—]\s*/);
+    const startStr = parts[0];
+    const parsed = Date.parse('1 ' + startStr);
+    if (!isNaN(parsed)) {
+      starts.push(new Date(parsed));
+    } else {
+      const yearMatch = startStr.match(/(\d{4})/);
+      if (yearMatch) starts.push(new Date(parseInt(yearMatch[1], 10), 0, 1));
+    }
+  });
+
+  if (starts.length === 0) return;
+
+  const earliest = new Date(Math.min(...starts.map(d => d.getTime())));
+  const now = new Date();
+  const years = Math.floor((now - earliest) / (365.25 * 24 * 60 * 60 * 1000));
+
+  expNumEl.textContent = years <= 0 ? 'Less than 1' : `${years}+`;
+})();
