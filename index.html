@@ -36,7 +36,14 @@
           <a class="menu__link" href="#contact">Contact</a>
         </nav>
 
-        <a class="btn" href="Documents/Charan Reddy Marthala Resume.docx" download="Charan_Marthala_.Net_Resume.docx" rel="noreferrer">Download Resume</a>
+        <a class="btn" href="Documents/Charan Reddy Marthala Resume.docx" download="Charan_Marthala_.Net_Resume.docx" rel="noreferrer" aria-label="Download resume">
+          <i class="fa-solid fa-download" aria-hidden="true"></i>
+          <span style="margin-left:8px;">Resume</span>
+        </a>
+
+        <button id="themeToggle" class="btn btn--ghost" aria-pressed="false" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
 
         <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
           <span></span><span></span><span></span>
@@ -52,6 +59,12 @@
         <a class="menu__link" href="#projects">Projects</a>
         <a class="menu__link" href="#certifications">Certifications</a>
         <a class="menu__link" href="#contact">Contact</a>
+        <div style="margin-top:12px;">
+          <a class="btn" href="Documents/Charan Reddy Marthala Resume.docx" download="Charan_Marthala_.Net_Resume.docx" rel="noreferrer" aria-label="Download resume">
+            <i class="fa-solid fa-download" aria-hidden="true"></i>
+            <span style="margin-left:8px;">Resume</span>
+          </a>
+        </div>
       </div>
     </header>
 
@@ -624,7 +637,7 @@
           <input type="hidden" name="_captcha" value="false" />
 
           <button class="btn btn--submit" type="submit" id="sendBtn">
-            Send Message
+            Send Message  
           </button>
 
           <p id="formStatus" class="muted tiny" style="display:none; margin-top:10px;"></p>
@@ -641,6 +654,16 @@
   </div>
 
   <script src="script.js"></script>
+  <!-- Modal for project preview -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal__overlay" id="modalOverlay"></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal__close" id="modalClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal__content" id="modalContent"></div>
+    </div>
+  </div>
+
+  <button id="toTop" class="to-top" aria-label="Back to top">↑</button>
 </body>
 </html>
 

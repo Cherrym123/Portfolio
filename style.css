@@ -5,6 +5,7 @@
   --teal: #2F6B64;
   --teal-2:#1E5E57;
   --yellow:#E6B23C;
+  --accent-light: #1C3F6B;
   --card:#FFFFFF;
   --radius: 16px;
   --max: 1240px;
@@ -13,6 +14,213 @@
   --shadow2: 0 10px 22px rgba(9, 24, 23, .10);
   --soft: 0 10px 30px rgba(47,107,100,.14);
 }
+
+/* Dark theme overrides when body has .dark */
+/* Dark theme overrides when body has .dark */
+body.dark{
+  --bg: #071018;
+  --ink: #E6F2EE;
+  --muted: rgba(230,242,238,.72);
+  --teal: #2FB08C;
+  --teal-2: #1E8A6F;
+  --yellow: #E6B23C;
+  --card: #071718;
+  --shadow: 0 20px 50px rgba(0,0,0,.6);
+  --shadow2: 0 12px 30px rgba(0,0,0,.5);
+  --soft: 0 10px 30px rgba(47,107,100,.09);
+}
+
+/* More explicit dark-mode element tweaks for clarity */
+body.dark .nav__inner{
+  background: rgba(6,12,14,.68);
+  border: 1px solid rgba(255,255,255,.03);
+}
+body.dark .menu__link{ color: rgba(230,242,238,.88); }
+body.dark .menu__link:hover{ color: #fff; }
+body.dark .menu__link.is-active{ color: var(--teal); }
+body.dark .logo, body.dark .logo__j{ color: var(--ink); }
+
+body.dark .page{ background: var(--bg); }
+body.dark .progress{ background: rgba(255,255,255,.04); }
+body.dark .progress__bar{ background: linear-gradient(90deg, rgba(47,176,140,.95), rgba(230,178,60,.85)); }
+
+body.dark .card,
+body.dark .timeline__card,
+body.dark .cert,
+body.dark .contact-card,
+body.dark .form,
+body.dark .p-card,
+body.dark .skill-card{
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.04);
+  box-shadow: 0 12px 30px rgba(0,0,0,.45);
+  color: var(--ink);
+}
+
+body.dark .portrait{ background: linear-gradient(180deg,#071717,#092725); box-shadow: 0 30px 80px rgba(0,0,0,.6); }
+body.dark .portrait__ring{ border-color: rgba(230,178,60,.32); opacity:.6; }
+
+body.dark .mini, body.dark .chip, body.dark .pill{
+  background: rgba(255,255,255,.02);
+  border: 1px solid rgba(255,255,255,.03);
+  color: rgba(230,242,238,.9);
+}
+
+body.dark .btn{ background: var(--teal); color: #041012; box-shadow: 0 12px 26px rgba(0,0,0,.5); }
+body.dark .btn--ghost{ background: rgba(255,255,255,.03); color: rgba(230,242,238,.92); border: 1px solid rgba(255,255,255,.04); box-shadow: none; }
+
+body.dark .form input, body.dark .form textarea{
+  background: rgba(255,255,255,.02);
+  border: 1px solid rgba(255,255,255,.04);
+  color: var(--ink);
+}
+body.dark .form input:focus, body.dark .form textarea:focus{
+  border-color: rgba(47,176,140,.45);
+  box-shadow: 0 0 0 6px rgba(47,176,140,.06);
+}
+
+body.dark .link-row{ background: rgba(255,255,255,.02); border:1px solid rgba(255,255,255,.03); }
+body.dark .cert__icon{ background: rgba(47,176,140,.08); color: var(--teal); border-color: rgba(47,176,140,.10); }
+
+/* Modal adjustments */
+body.dark .modal__overlay{ background: rgba(0,0,0,.6); }
+body.dark .modal__content{ background: #071718; color: var(--ink); box-shadow: 0 40px 120px rgba(0,0,0,.7); border: 1px solid rgba(255,255,255,.03); }
+
+/* To-top */
+body.dark .to-top{ background: var(--teal); color: #041012; box-shadow: 0 12px 30px rgba(0,0,0,.45); }
+
+/* Fine-tune text for high contrast */
+body.dark h1, body.dark h2, body.dark h3, body.dark p, body.dark li, body.dark label{ color: rgba(230,242,238,.98); }
+body.dark .muted{ color: rgba(230,242,238,.72); }
+
+/* Improve contrast for small UI elements and symbols in dark mode */
+body.dark .chip,
+body.dark .mini,
+body.dark .pill{
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.08);
+  color: rgba(230,242,238,.95);
+}
+
+body.dark .chip{ font-weight:800; }
+
+body.dark .menu__link{
+  color: rgba(230,242,238,.92);
+}
+
+body.dark .menu__link:hover{ color: #ffffff; }
+
+body.dark .burger span{
+  background: rgba(230,242,238,.85);
+}
+
+body.dark .cert__icon,
+body.dark .mini__icon,
+body.dark .social a,
+body.dark .link-row i,
+body.dark .p-actions .btn i,
+body.dark .chips i{
+  color: rgba(230,242,238,.95);
+}
+
+body.dark .portrait__ring{ border-color: rgba(230,178,60,.65); opacity: .9; }
+
+body.dark .progress{ background: rgba(255,255,255,.06); }
+body.dark .progress__bar{ background: linear-gradient(90deg, rgba(47,176,140,1), rgba(230,178,60,1)); }
+
+body.dark i, body.dark .fa{ color: rgba(230,242,238,.95); }
+
+/* Slightly stronger borders for small elements to aid visibility */
+body.dark .card,
+body.dark .timeline__card,
+body.dark .cert,
+body.dark .contact-card,
+body.dark .form,
+body.dark .p-card,
+body.dark .skill-card{
+  border: 1px solid rgba(255,255,255,.04);
+}
+
+/* Specific fixes for unreadable items in dark mode */
+body.dark .mini__sub,
+body.dark .p-list,
+body.dark .skills-grid .chip,
+body.dark .chips,
+body.dark .skill-card h3{
+  color: rgba(230,242,238,.92);
+}
+
+body.dark .mini__tag{
+  background: rgba(47,176,140,.10);
+  color: rgba(47,176,140,.98);
+  border: 1px solid rgba(47,176,140,.16);
+}
+
+body.dark .mini{
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.04);
+}
+
+/* Form placeholders & labels */
+body.dark .form label{ color: rgba(230,242,238,.92); }
+body.dark .form input::placeholder,
+body.dark .form textarea::placeholder{
+  color: rgba(230,242,238,.6);
+  opacity: 1;
+}
+
+/* Footer visibility */
+body.dark .footer{ color: rgba(230,242,238,.72); }
+
+/* Slightly brighter project chips/icons */
+body.dark .p-actions .btn,
+body.dark .chips .chip{
+  background: rgba(255,255,255,.04);
+  color: rgba(230,242,238,.92);
+  border: 1px solid rgba(255,255,255,.04);
+}
+
+/* Make 'Live' buttons green in dark mode for clear affordance */
+body.dark .btn--live{
+  background: var(--teal);
+  color: #041012;
+  border: 0;
+  box-shadow: 0 12px 26px rgba(0,0,0,.45);
+}
+/* Keep live button appearance consistent (no hover color change) */
+body.dark .btn--live:hover{
+  background: var(--teal);
+  transform: none;
+}
+
+/* Make GitHub icon in ghost buttons appear grey for better contrast */
+.p-actions .btn.btn--ghost .fa-brands.fa-github,
+.p-actions .btn.btn--ghost i.fa-github{
+  color: #6B7280;
+}
+
+/* Slightly brighter grey for dark mode */
+body.dark .p-actions .btn.btn--ghost .fa-brands.fa-github,
+body.dark .p-actions .btn.btn--ghost i.fa-github{
+  color: #9CA3AF;
+}
+
+/* Section headings: use a distinct, readable color in dark mode */
+/* Section headings: use a distinct, readable color in dark mode */
+body.dark .section__head h2{
+  color: #E6B23C;
+  text-shadow: 0 1px 0 rgba(0,0,0,.35);
+}
+
+/* Slightly brighten section subtitles if present */
+body.dark .section__head .muted{ color: rgba(230,242,238,.72); }
+
+/* Ensure section--alt also uses same dark-mode appearance */
+body.dark .section--alt{
+  background: transparent;
+  border: none;
+}
+
 
 *{ box-sizing:border-box; }
 html,body{ height:100%; }
@@ -300,11 +508,12 @@ a{ color: inherit; }
   padding: 60px 10px 0;
 }
 .section--alt{
-  margin-top: 30px;
-  padding: 30px 18px;
-  border-radius: 20px;
-  background: rgba(255,255,255,.32);
-  border: 1px solid rgba(15,45,43,.06);
+  /* Make alternate sections visually identical to regular sections */
+  margin: 0 auto;
+  padding: 60px 10px 0;
+  border-radius: 0;
+  background: transparent;
+  border: none;
 }
 .section__head{
   display:flex;
@@ -313,11 +522,12 @@ a{ color: inherit; }
   gap: 18px;
   margin-bottom: 18px;
 }
-.section__head h2{
+ .section__head h2{
   margin:0;
   font-size: 32px;
   letter-spacing: -0.8px;
-}
+  color: #E6B23C;
+ }
 .muted{ color: rgba(15,45,43,.62); margin: 0; }
 .tiny{ font-size: 12px; margin-top: 10px; }
 
@@ -629,6 +839,19 @@ a{ color: inherit; }
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Modal / lightbox */
+.modal{ position: fixed; inset: 0; display:none; align-items:center; justify-content:center; z-index:1200; }
+.modal[aria-hidden="false"]{ display:flex; }
+.modal__overlay{ position: absolute; inset:0; background: rgba(3,8,10,.6); backdrop-filter: blur(4px); }
+.modal__dialog{ position: relative; z-index:2; max-width: 920px; width: 92%; border-radius: 14px; overflow:auto; max-height: 86vh; }
+.modal__content{ background: var(--card); color: var(--ink); padding: 22px; border-radius: 12px; box-shadow: 0 30px 80px rgba(2,6,8,.6); }
+.modal__close{ position:absolute; right:8px; top:8px; border:0; background: transparent; color: var(--ink); font-size: 20px; padding: 10px; cursor:pointer; }
+
+/* Back to top */
+.to-top{ position: fixed; right: 20px; bottom: 28px; width:44px; height:44px; border-radius: 10px; border:0; display:none; align-items:center; justify-content:center; background: var(--teal); color:#fff; box-shadow: 0 12px 30px rgba(47,107,100,.16); cursor:pointer; z-index:1100; }
+.to-top.show{ display:flex; transform: translateY(0); }
+
 
 /* =========================
    RESPONSIVE HERO + NAV

@@ -105,7 +105,67 @@ form?.addEventListener('submit', async (e) => {
   }
 });
 
+// Theme toggle (persisted) — default to light unless user chose otherwise
+const themeToggle = document.getElementById('themeToggle');
+let theme = localStorage.getItem('theme') || 'light';
+
+function applyTheme(t){
+  if (t === 'dark') document.body.classList.add('dark'); else document.body.classList.remove('dark');
+  if (themeToggle) {
+    themeToggle.setAttribute('aria-pressed', String(t === 'dark'));
+    themeToggle.innerHTML = t === 'dark' ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+  }
+}
+
+applyTheme(theme);
+
+themeToggle?.addEventListener('click', () => {
+  theme = document.body.classList.contains('dark') ? 'light' : 'dark';
+  localStorage.setItem('theme', theme);
+  applyTheme(theme);
+});
+
+// Modal / project preview
+const modal = document.getElementById('modal');
+const modalContent = document.getElementById('modalContent');
+const modalClose = document.getElementById('modalClose');
+const modalOverlay = document.getElementById('modalOverlay');
+
+function closeModal(){
+  if (!modal) return;
+  modal.setAttribute('aria-hidden', 'true');
+  modalContent.innerHTML = '';
+  document.body.style.overflow = '';
+}
+
+document.querySelectorAll('.p-card').forEach(card => {
+  card.style.cursor = 'pointer';
+  card.addEventListener('click', (e) => {
+    // Ignore clicks on links inside the card
+    if (e.target.closest('a')) return;
+    const clone = card.cloneNode(true);
+    clone.classList.remove('reveal', 'is-visible');
+    modalContent.innerHTML = '';
+    modalContent.appendChild(clone);
+    if (modal) modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  });
+});
+
+modalClose?.addEventListener('click', closeModal);
+modalOverlay?.addEventListener('click', closeModal);
+window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+// Back to top
+const toTop = document.getElementById('toTop');
+window.addEventListener('scroll', () => {
+  if (!toTop) return;
+  if (window.scrollY > 400) toTop.classList.add('show'); else toTop.classList.remove('show');
+});
+toTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
 // Init
+
 setActive('#home');
 
 // Compute professional experience from earliest timeline start date and update UI
