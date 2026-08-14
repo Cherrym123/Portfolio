@@ -365,6 +365,47 @@ a{ color: inherit; }
 }
 .menu-mobile .menu__link{ display:block; padding: 10px 8px; }
 
+/* Only show the mobile menu when it has the .open class and on small screens */
+@media (max-width: 820px){
+  .menu-mobile.open{ display:block; }
+}
+
+/* Dark mode: ensure mobile menu matches the site's dark theme (do not force visibility) */
+body.dark .menu-mobile{
+  background: rgba(6,12,14,.86);
+  border: 1px solid rgba(255,255,255,.03);
+  box-shadow: 0 12px 40px rgba(0,0,0,.6);
+}
+
+body.dark .menu-mobile .menu__link{
+  color: rgba(230,242,238,.92);
+}
+
+body.dark .menu-mobile .menu__link:hover{
+  color: #FFFFFF;
+}
+
+/* Make the resume button inside mobile menu darker and consistent */
+body.dark .menu-mobile .btn{
+  background: rgba(255,255,255,.04);
+  color: rgba(230,242,238,.92);
+  border: 1px solid rgba(255,255,255,.04);
+}
+
+body.dark .menu-mobile .btn i{ color: rgba(230,242,238,.92); }
+
+/* Also support when the mobile menu element itself has a 'dark' class
+   This helps if the menu is styled independently or shown before body.dark is applied */
+.menu-mobile.dark{
+  background: rgba(6,12,14,.86);
+  border: 1px solid rgba(255,255,255,.03);
+  box-shadow: 0 12px 40px rgba(0,0,0,.6);
+}
+.menu-mobile.dark .menu__link{ color: rgba(230,242,238,.92); }
+.menu-mobile.dark .menu__link:hover{ color: #FFFFFF; }
+.menu-mobile.dark .btn{ background: rgba(255,255,255,.04); color: rgba(230,242,238,.92); border: 1px solid rgba(255,255,255,.04); }
+.menu-mobile.dark .btn i{ color: rgba(230,242,238,.92); }
+
 /* =========================
    HERO
    ========================= */

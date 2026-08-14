@@ -24,7 +24,6 @@ navLinks.forEach(a => {
     // close mobile menu
     if (mobileMenu.classList.contains('open')) {
       mobileMenu.classList.remove('open');
-      mobileMenu.style.display = 'none';
       burger.setAttribute('aria-expanded', 'false');
     }
   });
@@ -47,7 +46,6 @@ const mobileMenu = document.getElementById('menuMobile');
 burger?.addEventListener('click', () => {
   const isOpen = mobileMenu.classList.toggle('open');
   burger.setAttribute('aria-expanded', String(isOpen));
-  mobileMenu.style.display = isOpen ? 'block' : 'none';
 });
 
 // Scroll reveal
@@ -114,6 +112,10 @@ function applyTheme(t){
   if (themeToggle) {
     themeToggle.setAttribute('aria-pressed', String(t === 'dark'));
     themeToggle.innerHTML = t === 'dark' ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+  }
+  // Mirror theme state to mobile menu so its styles apply immediately on open
+  if (typeof mobileMenu !== 'undefined' && mobileMenu) {
+    mobileMenu.classList.toggle('dark', t === 'dark');
   }
 }
 
